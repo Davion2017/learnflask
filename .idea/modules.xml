@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/zlktqa.iml" filepath="$PROJECT_DIR$/.idea/zlktqa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/learnflask.iml" filepath="$PROJECT_DIR$/.idea/learnflask.iml" />
     </modules>
   </component>
 </project>
