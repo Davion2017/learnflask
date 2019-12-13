@@ -4,8 +4,8 @@ SECRET_KEY = os.urandom(24)
 
 DIALECT = 'mysql'
 DRIVER = 'pymysql'
-USERNAME = 'davion'
-PASSWORD = '123456'
+USERNAME = 'root'
+PASSWORD = '1573'
 HOST = '127.0.0.1'
 PORT = '3306'
 DATABASE = 'test_demo'

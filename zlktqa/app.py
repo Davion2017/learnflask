@@ -5,7 +5,6 @@ from exts import db
 from decorators import login_required
 from sqlalchemy import or_
 
-
 app = Flask(__name__)
 app.config.from_object(config)
 db.init_app(app)
@@ -85,7 +84,7 @@ def question():
 @app.route('/detail/<question_id>/', methods=['GET', 'POST'])
 def detail(question_id):
     question_model = Question.query.filter(Question.id == question_id).first()
-    return render_template('detail.html', question = question_model)
+    return render_template('detail.html', question=question_model)
 
 
 @app.route('/add_answer/', methods=['POST'])
@@ -106,7 +105,7 @@ def add_answer():
     db.session.add(answer)
     db.session.commit()
 
-    return render_template('detail.html', question = question)
+    return render_template('detail.html', question=question)
 
 
 @app.route('/search/')
@@ -116,14 +115,13 @@ def search():
     return render_template('index.html', questions=questions)
 
 
-
 @app.context_processor
 def my_context_processor():
     user_id = session.get('user_id')
     if user_id:
         user = User.query.filter(User.id == user_id).first()
         if user:
-            return {'user':user}
+            return {'user': user}
     return {}
 
 
